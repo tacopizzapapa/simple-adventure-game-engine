@@ -1,0 +1,26 @@
+{
+  "name": "simple-adventure-game-engine",
+  "version": "0.1.0",
+  "description": "A dead simple choose your own adventure game engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tacopizzapapa/simple-adventure-game-engine.git"
+  },
+  "keywords": [
+    "gameengine"
+  ],
+  "author": "TacoPizzaPapa",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tacopizzapapa/simple-adventure-game-engine/issues"
+  },
+  "homepage": "https://github.com/tacopizzapapa/simple-adventure-game-engine#readme",
+  "devDependencies": {
+    "mocha": "^9.2.2",
+    "should": "^13.2.3"
+  }
+}
