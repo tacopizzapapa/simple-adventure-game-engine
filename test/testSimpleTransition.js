@@ -1,4 +1,4 @@
-import * as should from 'should';
+import 'should';
 
 import SimpleTransition from '../transitions/simpleTransition.js';
 

@@ -1,5 +1,4 @@
-import pkg from 'should';
-const { should } = pkg;
+import 'should';
 
 import TransitionRegistry from "../transitions/transitionRegistry.js";
 
