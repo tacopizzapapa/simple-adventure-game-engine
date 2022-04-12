@@ -1,6 +1,6 @@
 {
   "name": "simple-adventure-game-engine",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A dead simple choose your own adventure game engine",
   "main": "index.js",
   "type": "module",
