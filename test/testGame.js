@@ -1,56 +1,14 @@
 import * as should from 'should';
 
-import simpleTransitionFactory from "../transitions/simpleTransitionFactory.js";
-import TransitionRegistry from "../transitions/transitionRegistry.js";
+import { defaultGameFactory } from '../index.js';
 
-import GameStateRegistry from "../states/gameStateRegistry.js";
-
-import Game from "../game/game.js";
-
-const gameDefinition = {
-    transitions: [
-        {
-            id: "transition-s1-1",
-            description: "Yes",
-            nextState: "state-happy-ending",
-            type: "simple"
-        },
-        {
-            id: "transition-s1-2",
-            description: "No",
-            nextState: "state-bad-ending",
-            type: "simple"
-        }
-    ],
-    states: [
-        {
-            id: "state-1",
-            transitions: [ "transition-s1-1", "transition-s1-2" ],
-            description: "You are playing this great game.  Are you having fun?"
-        },
-        {
-            id: "state-happy-ending",
-            description: "That's fantastic.  Thanks for playing."
-        },
-        {
-            id: "state-bad-ending",
-            description: "Boo"
-        }
-    ]
-};
-
-const transitionRegistry = new TransitionRegistry( {
-        "simple": simpleTransitionFactory
-    },
-    gameDefinition.transitions );
-
-const stateRegistry = new GameStateRegistry( gameDefinition.states, transitionRegistry );
+import gameDefinition from "./mocks/mockGameDefinition.js";
 
 describe( 'Game', () => {
 
     it( 'Should let us play the game', () => {
 
-        const game = new Game( 'A Test Game', 'A short little test game', 'state-1', stateRegistry );
+        const game = defaultGameFactory( gameDefinition );
 
         const firstState = game.getState();
 
